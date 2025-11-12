@@ -1,34 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ULTRAKILL_FULL_GAME</RootNamespace>
-    <AssemblyName>ULTRAKILL_FULL_GAME</AssemblyName>
-    <LangVersion>latest</LangVersion>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- You can add any NuGet packages here if you want -->
   <ItemGroup>
-    <!-- NuGet dependencies -->
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Steamworks.NET" Version="20.0.0" />
   </ItemGroup>
 
+  <!-- Unity DLL references (downloaded into /unity-libs by Dockerfile) -->
   <ItemGroup>
-    <!-- Local library references -->
-    <Reference Include="CustomRay">
-      <HintPath>libs/CustomRay.dll</HintPath>
+    <Reference Include="UnityEngine">
+      <HintPath>unity-libs/UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="DebugOverlays">
-      <HintPath>libs/DebugOverlays.dll</HintPath>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>unity-libs/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
-    <Reference Include="plog">
-      <HintPath>libs/plog.dll</HintPath>
-    </Reference>
-    <Reference Include="pcon.core">
-      <HintPath>libs/pcon.core.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>unity-libs/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
