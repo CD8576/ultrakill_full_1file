@@ -1,7 +1,0 @@
-build:
-  languages:
-    - csharp
-  build:
-    command: dotnet build Project.csproj -c Release
-  run:
-    command: dotnet run --project Project.csproj
