@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Newtonsoft JSON -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <!-- Steamworks.NET -->
+    <PackageReference Include="Steamworks.NET" Version="20.0.0" />
+    <!-- Discord Game SDK (if using a NuGet or local DLL) -->
+    <Reference Include="DiscordGameSDK">
+      <HintPath>libs/DiscordGameSDK.dll</HintPath>
+    </Reference>
+    <!-- Unity Engine assemblies (for external build environments) -->
+    <Reference Include="UnityEngine">
+      <HintPath>path/to/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>path/to/Unity/Editor/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+
+    <!-- Add custom or local libs -->
+    <Reference Include="CustomRay">
+      <HintPath>libs/CustomRay.dll</HintPath>
+    </Reference>
+    <Reference Include="DebugOverlays">
+      <HintPath>libs/DebugOverlays.dll</HintPath>
+    </Reference>
+    <Reference Include="plog">
+      <HintPath>libs/plog.dll</HintPath>
+    </Reference>
+    <Reference Include="pcon.core">
+      <HintPath>libs/pcon.core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
